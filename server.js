@@ -11,6 +11,9 @@ app.get('/api/data', (req, res) => {
   res.json({ message: 'Hello from the backend!' });
 });
 
+// Serve static files from the 'src/assets' folder
+app.use('/assets', express.static(path.join(__dirname, 'src', 'assets')));
+
 // Fallback to serve index.html for any other routes (SPA support)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'index.html'));
