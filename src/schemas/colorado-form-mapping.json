@@ -1,0 +1,168 @@
+{
+    "formTitle": "Colorado Sales Tax and Withholding Account Application",
+    "questions": [
+      {
+        "sectionTitle": "Business Information",
+        "fields": [
+          {
+            "label": "Business Name",
+            "fieldType": "text",
+            "name": "businessName",
+            "required": true
+          },
+          {
+            "label": "Trade Name / DBA",
+            "fieldType": "text",
+            "name": "tradeName",
+            "required": false
+          },
+          {
+            "label": "Tax Identification Number (TIN)",
+            "fieldType": "text",
+            "name": "tin",
+            "required": true
+          },
+          {
+            "label": "Federal Employer Identification Number (FEIN)",
+            "fieldType": "text",
+            "name": "fein",
+            "required": false
+          },
+          {
+            "label": "Principal Address",
+            "fieldType": "text",
+            "name": "principalAddress",
+            "required": true
+          },
+          {
+            "label": "County",
+            "fieldType": "text",
+            "name": "county",
+            "required": true
+          },
+          {
+            "label": "Phone Number",
+            "fieldType": "tel",
+            "name": "phoneNumber",
+            "required": true
+          },
+          {
+            "label": "Email Address",
+            "fieldType": "email",
+            "name": "email",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Type of Organization",
+        "fields": [
+          {
+            "label": "Choose your organization type",
+            "fieldType": "dropdown",
+            "name": "organizationType",
+            "options": [
+              "Individual/Sole Proprietor",
+              "Limited Liability Company (LLC)",
+              "Corporation/S Corp",
+              "General Partnership",
+              "Limited Partnership (LP)",
+              "Nonprofit (Charitable)",
+              "Government"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Sales Tax Account",
+        "fields": [
+          {
+            "label": "Type of Sale",
+            "fieldType": "radio",
+            "name": "typeOfSale",
+            "options": [
+              "Wholesaler",
+              "Retail-Sales",
+              "Charitable"
+            ],
+            "required": true
+          },
+          {
+            "label": "License Start Date or First Day of Sale",
+            "fieldType": "date",
+            "name": "startDate",
+            "required": true
+          },
+          {
+            "label": "Filing Frequency",
+            "fieldType": "dropdown",
+            "name": "filingFrequency",
+            "options": [
+              "Annually",
+              "Quarterly",
+              "Monthly"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Withholding Account",
+        "fields": [
+          {
+            "label": "Type of Withholding",
+            "fieldType": "radio",
+            "name": "withholdingType",
+            "options": [
+              "W2 Withholding",
+              "1099 Withholding",
+              "W2G (Gaming Withholding)",
+              "Oil/Gas Withholding"
+            ],
+            "required": true
+          },
+          {
+            "label": "First Day of Payroll",
+            "fieldType": "date",
+            "name": "firstPayrollDate",
+            "required": false
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Owners/Partners/Members/Officers",
+        "fields": [
+          {
+            "label": "Owner's First Name",
+            "fieldType": "text",
+            "name": "ownerFirstName",
+            "required": true
+          },
+          {
+            "label": "Owner's Last Name",
+            "fieldType": "text",
+            "name": "ownerLastName",
+            "required": true
+          },
+          {
+            "label": "Owner's SSN",
+            "fieldType": "text",
+            "name": "ownerSSN",
+            "required": true
+          },
+          {
+            "label": "Is this person responsible for tax compliance?",
+            "fieldType": "radio",
+            "name": "taxCompliance",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          }
+        ]
+      }
+    ]
+  }
+  
