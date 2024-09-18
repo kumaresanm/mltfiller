@@ -1,0 +1,727 @@
+:root {
+  --marineBlue: hsl(213, 96%, 18%);
+  --purplishBlue: hsl(243, 100%, 62%);
+  --pastelBlue: hsl(228, 100%, 84%);
+  --lightBlue: hsl(206, 94%, 87%);
+  --strawberryRed: hsl(354, 84%, 57%);
+  --coolGray: hsl(231, 11%, 70%);
+  --lightGray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--pastelBlue); */
+  background: linear-gradient(135deg, #435463, #6a798f, #91a0b6, #b8c8de, #dfeef8);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.formParentWrapper {
+  display: flex;
+  flex-direction: row;
+  min-width: 65%;
+  min-height: 520px;
+  border-radius: 14px;
+  padding: 12px;
+  background-color: var(--white);
+  margin-top: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  ;
+  gap: 24px;
+  width: 30%;
+  padding: 28px;
+  /* background-image: url(assets/images/bg-sidebar-desktop.svg); */
+  /* background-image: url("https://multi-step-form98.netlify.app/assets/bg-sidebar-desktop.e6d2744a.svg"); */
+  background-image: url("https://img.freepik.com/free-photo/golden-frame-blue-background_53876-92990.jpg?t=st=1719859030~exp=1719862630~hmac=1563c781c982de80eed6e633377f19c55fb7ff5e744e8728eba60cd7c7e86164&w=360");
+  /* background: linear-gradient(135deg, #256572, #3b7f8b, #52a0a5, #6cc1c1, #88e3de); */
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  border-radius: 12px;
+  padding-block: 32px;
+}
+
+@media all and (max-width: 630px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    /* background-color: var(--pastelBlue); */
+    background: linear-gradient(135deg, #435463, #6a798f, #91a0b6, #b8c8de, #dfeef8);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .formParentWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 520px;
+    border-radius: 14px;
+    padding: 0;
+    margin-top: 0px;
+    /* background-color: var(--pastelBlue) !important; */
+    background: linear-gradient(135deg, #435463, #6a798f, #91a0b6, #b8c8de, #dfeef8);
+
+  }
+
+
+
+  .steps {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0;
+    width: 100% !important;
+    padding-inline: 28px;
+    /* background-image: url(assets/images/bg-sidebar-mobile.svg); */
+    /* background-image: url("https://multi-step-form98.netlify.app/assets/bg-sidebar-mobile.f8e29a05.svg"); */
+    background-image: url("https://img.freepik.com/free-photo/golden-rectangular-frame-abstract-background_53876-165442.jpg?t=st=1719859232~exp=1719862832~hmac=a7153bd7e77bd1ce1d15268f6f7d85ffa260c4e80b806345b2ae731af7142acf&w=996");
+    background-repeat: repeat-x;
+    object-fit: cover;
+    -o-object-fit: cover !important;
+    background-position: top;
+    background-size: cover;
+    border-radius: 0;
+    min-height: 180px !important;
+  }
+
+  .rightSectionParent {
+    position: absolute;
+    top: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-self: center;
+    border-radius: 12px;
+    gap: 24px;
+  }
+
+  .rightSectionWrapper {
+    width: 92% !important;
+    align-self: center;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding-block: 32px;
+    padding-bottom: 40px;
+  }
+
+  .mainForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-inline: 24px;
+  }
+
+  .info {
+    display: none;
+  }
+
+  .btnWrapper {
+    width: 100% !important;
+    background-color: var(--white);
+    padding-bottom: 0 !important;
+    padding-inline: 14px;
+    padding-block: 16px !important;
+  }
+
+  .planParent {
+    flex-direction: column !important;
+  }
+
+  .plan {
+    padding-top: 24px !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    min-height: 90px !important;
+  }
+
+  .checkBoxInfo {
+    gap: 16px !important;
+  }
+
+  .thankMsg {
+    max-width: 375px !important;
+    padding-inline: 16px;
+  }
+
+  .thankContainer {
+    align-items: center !important;
+  }
+
+  .label {
+    display: none;
+  }
+
+}
+
+.step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid var(--white);
+  color: white;
+}
+
+.step.active {
+  background-color: var(--lightBlue);
+  border: 1.875px solid var(--lightBlue);
+  color: var(--marineBlue);
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.lastStep {
+  visibility: hidden;
+}
+
+.label {
+  font-size: 10px;
+  color: var(--lightGray);
+  font-weight: 400;
+}
+
+.info {
+  margin-top: 4px;
+  color: var(--white);
+  font-weight: 550;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.rightSectionParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.rightSectionWrapper {
+  margin-top: 32px;
+  width: 75%;
+  align-self: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.personal {
+  font-size: 36px;
+  font-weight: 700;
+  font-variant: normal;
+  margin-bottom: 8px;
+  color: var(--marineBlue);
+}
+
+.personalInfo {
+  color: var(--coolGray);
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldParent input {
+  width: 100%;
+  padding-inline: 8px;
+  padding-block: 12px;
+  border-radius: 8px;
+  border: 1.5px solid var(--lightGray);
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--marineBlue);
+  cursor: pointer;
+}
+
+.fieldParent input:focus {
+  border: 1.5px solid var(--purplishBlue);
+}
+
+.fieldParent input::placeholder {
+  color: var(--coolGray);
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.labelErrorParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px !important;
+  color: var(--marineBlue) !important;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+.error {
+  display: none;
+  color: var(--strawberryRed);
+  font-weight: 600;
+}
+
+.showError {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.borderError {
+  border: 1.875px solid var(--strawberryRed) !important;
+}
+
+.hide {
+  display: none;
+}
+
+.blue {
+  color: var(--marineBlue) !important;
+  font-size: 12px;
+}
+
+.hideBtn {
+  visibility: hidden;
+}
+
+.showPrice {
+  display: block;
+}
+
+.btnWrapper {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.next {
+  width: 100px;
+  font-size: 14px;
+  padding-inline: 4px;
+  height: 44px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--marineBlue);
+  border: 1px solid var(--marineBlue);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+}
+
+.next.confirm {
+  background-color: var(--purplishBlue) !important;
+  border: 1px solid var(--purplishBlue) Im !important;
+}
+
+.prev {
+  color: var(--coolGray);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+}
+
+.prev:hover {
+  color: var(--marineBlue);
+}
+
+.prev:active {
+  transform: translateY(2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.planParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.plan {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 100px;
+  border: 1.875px solid var(--lightGray);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 0px 0px;
+}
+
+.price {
+  font-weight: 500;
+  color: gray;
+}
+
+.plan img {
+  width: 32px;
+  height: 32px;
+}
+
+.planTitle {
+  font-weight: 700;
+  color: var(--marineBlue);
+}
+
+.innerPlan {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan.border {
+  border: 1.875px solid var(--purplishBlue);
+  background-color: var(--magnolia);
+}
+
+
+.random {
+  font-size: 14px;
+  color: var(--coolGray);
+  font-weight: 500;
+}
+
+/* Check Box UI*/
+
+.planTypeParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.switchType {
+  color: var(--coolGray);
+  font-weight: 700;
+}
+
+.activeType {
+  color: var(--marineBlue);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--marineBlue);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--white);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input[type="checkbox"]:checked+.slider::before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 16px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+/* Check Boxes*/
+.checkBoxesParent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkBoxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1.875px solid var(--lightGray);
+  cursor: pointer;
+}
+
+.checkBoxInfo {
+  display: flex;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.checkBoxInfo p {
+  margin: 0;
+  margin-block: 4px;
+  align-items: center;
+}
+
+.checkBoxContainer.cardBorder {
+  border: 1.875px solid var(--purplishBlue);
+  background-color: var(--alabaster);
+}
+
+.checkBoxInfo input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+  accent-color: var(--purplishBlue);
+  margin-top: 8px;
+  border: 1.875px solid var(--lightGray) !important;
+}
+
+.addTitle {
+  font-weight: 700;
+  color: var(--marineBlue);
+}
+
+.addOnPrice {
+  color: var(--purplishBlue);
+  font-weight: 600;
+}
+
+/* Summary  */
+
+.billingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+}
+
+.billingParent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 24px;
+  background-color: var(--magnolia);
+  border-radius: 8px;
+}
+
+.planInfo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1.875px solid var(--lightGray);
+  padding-bottom: 20px;
+}
+
+.planInfo p {
+  margin: 0;
+}
+
+.selectedPlan {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--marineBlue);
+}
+
+.billingContainer {
+  margin-top: 16px;
+}
+
+.selectedPlanBill {
+  color: var(--marineBlue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.changeLink {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--coolGray);
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.changeLink:hover {
+  color: var(--purplishBlue);
+}
+
+.ON {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ON p {
+  margin: 0;
+}
+
+.totalBill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 8px;
+}
+
+.planError {
+  color: var(--strawberryRed);
+  display: none;
+  font-weight: 700;
+  margin-bottom: -8px;
+}
+
+.dynamicData {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 16px;
+}
+
+.adTitle {
+  color: var(--coolGray);
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.adPrice {
+  color: var(--marineBlue);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.finalPrice {
+  color: var(--purplishBlue);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*Thank you*/
+.thankContainer {
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.thankParent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.thankParent img {
+  width: 64px;
+  height: 64px;
+}
+
+.thankyou {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.thankMsg {
+  max-width: 390px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--coolGray);
+  font-weight: 450;
+  line-height: 20px;
+}

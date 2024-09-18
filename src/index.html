@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/512/1484/1484799.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Multi Step Form</title>
+</head>
+
+<body>
+
+  <div class="formParentWrapper" data-step="1">
+
+    <div class="steps">
+
+      <div class="stepInfo">
+        <div class="step active" data-step="1">1</div>
+        <div>
+          <p class="label">STEP 1</p>
+          <p class="info">YOUR INFO</p>
+        </div>
+      </div>
+
+      <div class="stepInfo">
+        <div class="step" data-step="2">2</div>
+        <div>
+          <p class="label">STEP 2</p>
+          <p class="info">SELECT PLAN</p>
+        </div>
+      </div>
+
+      <div class="stepInfo">
+        <div class="step" data-step="3">3</div>
+        <div>
+          <p class="label">STEP 3</p>
+          <p class="info">ADD-ONS</p>
+        </div>
+      </div>
+
+      <div class="stepInfo">
+        <div class="step" data-step="4">4</div>
+        <div>
+          <p class="label">STEP 4</p>
+          <p class="info">SUMMARY</p>
+        </div>
+      </div>
+
+      <div class="step lastStep" data-step="5">5</div>
+
+    </div>
+
+    <div class="rightSectionParent">
+      <div class="rightSectionWrapper">
+
+        <div>
+
+        </div>
+        <div class="formContainer" data-step="1">
+
+          <div class="mainForm">
+
+            <div>
+              <p class="personal">Personal Info</p>
+              <p class="personalInfo">Please provide your name, email address, and phone number.</p>
+            </div>
+
+            <div class="form">
+              <div class="fieldParent">
+                <div class="labelErrorParent">
+                  <label for="name">Name</label>
+                  <p class="error"></p>
+                </div>
+                <input placeholder="e.g. Stephen King" type="text" id="name" name="name" class="name">
+              </div>
+
+              <div class="fieldParent">
+                <div class="labelErrorParent">
+                  <label for="email">Email Address</label>
+                  <p class="error"></p>
+                </div>
+                <input placeholder="e.g. stephenking@lorem.com" type="email" id="email" name="email" class="email">
+              </div>
+
+              <div class="fieldParent">
+                <div class="labelErrorParent">
+                  <label for="number">Phone Number</label>
+                  <p class="error"></p>
+                </div>
+                <input placeholder="e.g. +1 234 567 890" type="text" id="number" name="number" class="number">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="formContainer hide" data-step="2">
+
+          <div class="mainForm">
+
+            <div>
+              <p class="personal">Select your plan</p>
+              <p class="personalInfo">You have the option of monthly or yearly billing.</p>
+            </div>
+
+            <p class="planError">Please Select any Plan</p>
+
+            <div class="planParent">
+
+              <div class="plan">
+                <img src="assets/images/icon-arcade.svg" alt="">
+                <div class="innerPlan">
+                  <p class="planTitle">Arcade</p>
+                  <p class="price" data-price="9">$9/mo</p>
+                  <p class="hide blue">2 months free</p>
+                </div>
+              </div>
+
+              <div class="plan">
+                <img src="assets/images/icon-advanced.svg" alt="">
+                <div class="innerPlan">
+                  <p class="planTitle">Advanced</p>
+                  <p class="price" data-price="12">$12/mo</p>
+                  <p class="hide blue">2 months free</p>
+                </div>
+              </div>
+
+              <div class="plan">
+                <img src="assets/images/icon-pro.svg" alt="">
+                <div class="innerPlan">
+                  <p class="planTitle">Pro</p>
+                  <p class="price" data-price="15">$15/mo</p>
+                  <p class="hide blue">2 months free</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="planTypeParent">
+              <p class="switchType activeType">Monthly</p>
+              <label class="switch">
+                <input type="checkbox" class="pricePlanSlider">
+                <span class="slider round"></span>
+              </label>
+              <p class="switchType">Yearly</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="formContainer hide" data-step="3">
+
+          <div class="mainForm">
+
+            <div>
+              <p class="personal">Pick add-ons</p>
+              <p class="personalInfo">Add-ons help enhance your gaming experience.</p>
+            </div>
+
+            <div class="checkBoxesParent">
+
+              <div class="checkBoxContainer">
+                <div class="checkBoxInfo">
+                  <input type="checkbox" class="addon" value="1" id="first">
+                  <div class="about">
+                    <label for="first" class="addTitle">Online service</label>
+                    <p class="random">Access to multiplayer games</p>
+                  </div>
+                </div>
+                <p data-price="1" class="addOnPrice">+$1/mo</p>
+              </div>
+
+              <div class="checkBoxContainer">
+                <div class="checkBoxInfo">
+                  <input type="checkbox" class="addon" value="2" id="second">
+                  <div class="about">
+                    <label for="second" class="addTitle">Large Storage</label>
+                    <p class="random">Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p data-price="2" class="addOnPrice">+$2/mo</p>
+              </div>
+
+              <div class="checkBoxContainer">
+                <div class="checkBoxInfo">
+                  <input type="checkbox" class="addon" value="3" id="third">
+                  <div class="about">
+                    <label for="third" class="addTitle">Customizable profile</label>
+                    <p class="random">Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p data-price="2" class="addOnPrice">+$2/mo</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="formContainer hide" data-step="4">
+
+          <div class="mainForm">
+
+            <div>
+              <p class="personal">Finishing up</p>
+              <p class="personalInfo">Double-check everything looks ok before confirming.</p>
+            </div>
+
+            <div class="billingContainer">
+
+              <div class="billingParent">
+
+                <div class="planInfo">
+                  <div class="selectedPlanParent">
+                    <p class="selectedPlan"></p>
+                    <p class="changeLink">Change</p>
+                  </div>
+                  <p class="selectedPlanBill"></p>
+                </div>
+
+                <div class="dynamicData">
+
+                </div>
+
+              </div>
+
+              <div class="totalBill">
+                <p class="adTitle"></p>
+                <p class="finalPrice"></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="formContainer hide" data-step="5">
+
+          <div class="thankContainer">
+
+            <div class="thankParent">
+              <img src="/assets/images//icon-thank-you.svg" alt="">
+              <p class="thankyou">Thank You!</p>
+              <p class="thankMsg">Thanks for confirming your subscription! We hope you have fun using our platform. If
+                you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="btnWrapper">
+        <p class="prev hideBtn" data-step="1">Go Back</p>
+        <button class="next" data-step="1">Next Step</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
