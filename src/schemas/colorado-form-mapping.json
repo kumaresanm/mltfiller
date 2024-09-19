@@ -2,55 +2,60 @@
     "formTitle": "Colorado Sales Tax and Withholding Account Application",
     "questions": [
       {
-        "sectionTitle": "Business Information",
-        "fields": [
+        "formTitle": "Colorado Sales Tax and Withholding Account Application",
+        "sections": [
           {
-            "label": "Business Name",
-            "fieldType": "text",
-            "name": "businessName",
-            "required": true
-          },
-          {
-            "label": "Trade Name / DBA",
-            "fieldType": "text",
-            "name": "tradeName",
-            "required": false
-          },
-          {
-            "label": "Tax Identification Number (TIN)",
-            "fieldType": "text",
-            "name": "tin",
-            "required": true
-          },
-          {
-            "label": "Federal Employer Identification Number (FEIN)",
-            "fieldType": "text",
-            "name": "fein",
-            "required": false
-          },
-          {
-            "label": "Principal Address",
-            "fieldType": "text",
-            "name": "principalAddress",
-            "required": true
-          },
-          {
-            "label": "County",
-            "fieldType": "text",
-            "name": "county",
-            "required": true
-          },
-          {
-            "label": "Phone Number",
-            "fieldType": "tel",
-            "name": "phoneNumber",
-            "required": true
-          },
-          {
-            "label": "Email Address",
-            "fieldType": "email",
-            "name": "email",
-            "required": true
+            "sectionTitle": "Business Information",
+            "fields": [
+              {
+                "label": "Business Name",
+                "fieldType": "text",
+                "name": "businessName",
+                "required": true
+              },
+              {
+                "label": "Trade Name / DBA",
+                "fieldType": "text",
+                "name": "tradeName",
+                "required": false
+              },
+              {
+                "label": "Tax Identification Number (TIN)",
+                "fieldType": "text",
+                "name": "tin",
+                "required": true
+              },
+              {
+                "label": "Federal Employer Identification Number (FEIN)",
+                "fieldType": "text",
+                "name": "fein",
+                "required": false
+              },
+              {
+                "label": "Principal Address",
+                "fieldType": "text",
+                "name": "principalAddress",
+                "required": true
+              },
+              {
+                "label": "County",
+                "fieldType": "text",
+                "name": "county",
+                "required": true
+              },
+              {
+                "label": "Phone Number",
+                "fieldType": "tel",
+                "name": "phoneNumber",
+                "required": true
+              },
+              {
+                "label": "Email Address",
+                "fieldType": "email",
+                "name": "email",
+                "required": true
+              }
+            ]
           }
         ]
       },
@@ -69,6 +74,45 @@
               "Limited Partnership (LP)",
               "Nonprofit (Charitable)",
               "Government"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Owners/Partners/Members/Officers",
+        "fields": [
+          {
+            "label": "Owner's First Name",
+            "fieldType": "text",
+            "name": "ownerFirstName",
+            "required": true
+          },
+          {
+            "label": "Owner's Last Name",
+            "fieldType": "text",
+            "name": "ownerLastName",
+            "required": true
+          },
+          {
+            "label": "Owner's SSN",
+            "fieldType": "text",
+            "name": "ownerSSN",
+            "required": true
+          },
+          {
+            "label": "Owner's Phone Number",
+            "fieldType": "tel",
+            "name": "ownerPhoneNumber",
+            "required": true
+          },
+          {
+            "label": "Is this person responsible for tax compliance?",
+            "fieldType": "radio",
+            "name": "taxCompliance",
+            "options": [
+              "Yes",
+              "No"
             ],
             "required": true
           }
@@ -104,6 +148,46 @@
               "Monthly"
             ],
             "required": true
+          },
+          {
+            "label": "Do you sell alcohol?",
+            "fieldType": "radio",
+            "name": "sellAlcohol",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "Do you sell tobacco?",
+            "fieldType": "radio",
+            "name": "sellTobacco",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "Do you sell Prepaid Wireless?",
+            "fieldType": "radio",
+            "name": "sellPrepaidWireless",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "Do you rent out rooms for 30 days or less?",
+            "fieldType": "radio",
+            "name": "rentRooms",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
           }
         ]
       },
@@ -127,42 +211,272 @@
             "fieldType": "date",
             "name": "firstPayrollDate",
             "required": false
+          },
+          {
+            "label": "Filing Frequency (W2)",
+            "fieldType": "dropdown",
+            "name": "w2FilingFrequency",
+            "options": [
+              "Quarterly",
+              "Monthly",
+              "Weekly"
+            ],
+            "required": true
+          },
+          {
+            "label": "Filing Frequency (1099)",
+            "fieldType": "dropdown",
+            "name": "1099FilingFrequency",
+            "options": [
+              "Quarterly",
+              "Monthly",
+              "Weekly"
+            ],
+            "required": false
           }
         ]
       },
       {
-        "sectionTitle": "Owners/Partners/Members/Officers",
+        "sectionTitle": "Signature",
         "fields": [
           {
-            "label": "Owner's First Name",
+            "label": "Signature of Owner, Partner, Member, or Officer",
             "fieldType": "text",
-            "name": "ownerFirstName",
+            "name": "signature",
             "required": true
           },
           {
-            "label": "Owner's Last Name",
+            "label": "Job Title",
             "fieldType": "text",
-            "name": "ownerLastName",
+            "name": "jobTitle",
             "required": true
           },
           {
-            "label": "Owner's SSN",
+            "label": "Date",
+            "fieldType": "date",
+            "name": "signatureDate",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Business Acquisition or Purchase",
+        "fields": [
+          {
+            "label": "Prior Business Name",
             "fieldType": "text",
-            "name": "ownerSSN",
+            "name": "priorBusinessName",
+            "required": false
+          },
+          {
+            "label": "Prior Owner’s First Name",
+            "fieldType": "text",
+            "name": "priorOwnerFirstName",
+            "required": false
+          },
+          {
+            "label": "Prior Owner’s Last Name",
+            "fieldType": "text",
+            "name": "priorOwnerLastName",
+            "required": false
+          },
+          {
+            "label": "Date of Acquisition (MM/YYYY)",
+            "fieldType": "date",
+            "name": "acquisitionDate",
+            "required": false
+          },
+          {
+            "label": "Prior Owner’s Address",
+            "fieldType": "text",
+            "name": "priorOwnerAddress",
+            "required": false
+          },
+          {
+            "label": "Prior Owner’s FEIN",
+            "fieldType": "text",
+            "name": "priorOwnerFein",
+            "required": false
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Mailing Address and Additional Contact Information",
+        "fields": [
+          {
+            "label": "Business Name (if different from principal address)",
+            "fieldType": "text",
+            "name": "mailingBusinessName",
+            "required": false
+          },
+          {
+            "label": "Attention To (First, Last Name)",
+            "fieldType": "text",
+            "name": "attentionTo",
+            "required": false
+          },
+          {
+            "label": "Mailing Address",
+            "fieldType": "text",
+            "name": "mailingAddress",
+            "required": false
+          },
+          {
+            "label": "City",
+            "fieldType": "text",
+            "name": "mailingCity",
+            "required": false
+          },
+          {
+            "label": "State",
+            "fieldType": "text",
+            "name": "mailingState",
+            "required": false
+          },
+          {
+            "label": "ZIP Code",
+            "fieldType": "text",
+            "name": "mailingZip",
+            "required": false
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Sales Tax License Fees",
+        "fields": [
+          {
+            "label": "License Start Date (MM/YYYY)",
+            "fieldType": "date",
+            "name": "licenseStartDate",
             "required": true
           },
           {
-            "label": "Is this person responsible for tax compliance?",
+            "label": "Filing Frequency for Sales Tax",
+            "fieldType": "dropdown",
+            "name": "salesTaxFilingFrequency",
+            "options": [
+              "Annually",
+              "Quarterly",
+              "Monthly"
+            ],
+            "required": true
+          },
+          {
+            "label": "State Sales Tax Deposit",
+            "fieldType": "number",
+            "name": "salesTaxDeposit",
+            "required": false
+          },
+          {
+            "label": "Wholesale License Fee",
+            "fieldType": "number",
+            "name": "wholesaleLicenseFee",
+            "required": false
+          },
+          {
+            "label": "Retail Sales Tax License Fee",
+            "fieldType": "number",
+            "name": "retailSalesTaxLicenseFee",
+            "required": false
+          },
+          {
+            "label": "Charitable License Fee",
+            "fieldType": "number",
+            "name": "charitableLicenseFee",
+            "required": false
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Proof of Identification",
+        "fields": [
+          {
+            "label": "Identification Type",
+            "fieldType": "dropdown",
+            "name": "idType",
+            "options": [
+              "State DL/ID",
+              "Passport",
+              "Other"
+            ],
+            "required": true
+          },
+          {
+            "label": "ID Number",
+            "fieldType": "text",
+            "name": "idNumber",
+            "required": true
+          },
+          {
+            "label": "Issuing State/Country",
+            "fieldType": "text",
+            "name": "issuingState",
+            "required": true
+          }
+        ]
+      },
+      {
+        "sectionTitle": "Marketplace and Products",
+        "fields": [
+          {
+            "label": "Do you sell exclusively through a marketplace?",
             "fieldType": "radio",
-            "name": "taxCompliance",
+            "name": "marketplaceExclusive",
             "options": [
               "Yes",
               "No"
             ],
             "required": true
+          },
+          {
+            "label": "Are you a Marketplace Facilitator?",
+            "fieldType": "radio",
+            "name": "marketplaceFacilitator",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "List the specific products you sell or services you provide",
+            "fieldType": "textarea",
+            "name": "productsServices",
+            "required": true
           }
         ]
-      }
+      },
+      {
+        "sectionTitle": "Marketplace and Products",
+        "fields": [
+          {
+            "label": "Do you sell exclusively through a marketplace?",
+            "fieldType": "radio",
+            "name": "marketplaceExclusive",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "Are you a Marketplace Facilitator?",
+            "fieldType": "radio",
+            "name": "marketplaceFacilitator",
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "required": true
+          },
+          {
+            "label": "List the specific products you sell or services you provide",
+            "fieldType": "textarea",
+            "name": "productsServices",
+            "required": true
+          }
+        ]
+      }                                                     
     ]
   }
   
